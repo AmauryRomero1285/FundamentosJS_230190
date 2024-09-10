@@ -8,7 +8,7 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
 
 
 
-### Auto
+### Autor
 Yáred Amaury Romero Martínez
 Unidad 1
 Aplicaciones Web Orientadas a Servicios
