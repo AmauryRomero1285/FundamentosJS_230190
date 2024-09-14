@@ -32,13 +32,13 @@ console.log("miMatricula es del tipo: ",typeof(miMatricula));
 console.log("miEdad es del tipo: ",typeof(miEdad));
 
 // c) Let
-let mifechaNacimiento="2005-12-08";
+let miFechaNacimiento="2005-12-08";
 let miColorFavorito;
 
 console.warn("---Declaración de Varibles locales usando: LET");
-console.log("Genial, te voy conociendo mejor, ahora se que tu naciste el: ",mifechaNacimiento, "color Favorito es : mmmmmmmm dejame pensar...");
+console.log("Genial, te voy conociendo mejor, ahora se que tu naciste el: ",miFechaNacimiento, "color Favorito es : mmmmmmmm dejame pensar...");
 miColorFavorito="Naranja";
-console.log(` creo que es $(), ¿le atiné? `)//La manera de mezclar textos fijos con el valor actual de las variables se le conoce como: interpretación y deben iniciar y finalizar con un backtic-tildeinversa
+console.log(`Creo que es ${miColorFavorito}, ¿le atiné?`)//La manera de mezclar textos fijos con el valor actual de las variables se le conoce como: interpretación y deben iniciar y finalizar con un backtic-tilde inversa
 console.log("Analizando los datos puedo deducir que: ");
-console.log("miMatricula es del tipo: ",typeof(miColorFavorito));
-console.log("miEdad es del tipo: ",typeof(mifechaNacimiento));
+console.log("miColorFavorito es del tipo: ",typeof(miColorFavorito));
+console.log("miFechaNacimiento es del tipo: ",typeof(miFechaNacimiento));
