@@ -195,7 +195,7 @@ console.log(
     "Las ariables no tienen el mismo valor"
 );
 
-console,log("Comparación de la identidad entre undefined y null");
+console.log("Comparación de la identidad entre undefined y null");
 console.log(
     (fecha_ultimoPost===estatusRelacionSentimental)?
     "Ambas Variables tienen el mismo valor y el mismo tipo de dato":
