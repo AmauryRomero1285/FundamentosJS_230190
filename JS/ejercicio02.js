@@ -171,5 +171,33 @@ let fecha_ultimoPost;
 //Supongamos que el usuario Amaury con correo electronico amaury210@gmail.com desea ingresar su contraseña pas: pass1234
 
 nombreUsuario="amaury21@gmail.com";
-passUsuario="pass1234"
-console.log(``);
+passUsuario="pass1234";
+
+//en este momento de ejecución del sistema no sabemos su género, ni su estatus de relación sentimental.
+
+console.log(`El usuario ${nombreUsuario} esta intentando logearse con una contraseña de: ${passUsuario}`);
+
+//Lo que prosigue es que el sistema contejará los datos ingrersados con la base de datos y en caso de que los datos sean correctos comenzará la sesión en la plataforma actualizando estos valores.
+
+//Dado que amaury ed del genero masculino, y denota que su estatus de relación no ha sido capturado o lo mantiene privado esto genera la actualización de los valores de las variables.
+
+generoUsuario="M";
+estatusRelacionSentimental=null;
+
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su información de perfil podemos deducir que es del genero ${generoUsuario} y que su estatus es ${estatusRelacionSentimental} y su última publicación la realizó el: ${fecha_ultimoPost}`);
+
+//Comparando Null vs Undefined
+
+console.log("Comparación de la equidad entre undefined y null:");
+console.log(
+    (fecha_ultimoPost==estatusRelacionSentimental)?
+    "Ambas Variables tienen el mismo valor":
+    "Las ariables no tienen el mismo valor"
+);
+
+console,log("Comparación de la identidad entre undefined y null");
+console.log(
+    (fecha_ultimoPost===estatusRelacionSentimental)?
+    "Ambas Variables tienen el mismo valor y el mismo tipo de dato":
+    "Las variables tienen el mismo valor, pero no el mismo tipo de dato"
+);
