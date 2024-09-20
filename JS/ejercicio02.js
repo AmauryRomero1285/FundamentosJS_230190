@@ -143,3 +143,33 @@ if(numero1===numero5){
 }else{
     console.log(`Se comparó numero1 con numero5, detrerminando que NO tienen el mismo tipo de DATO.`);
 }
+//numero 6
+console.log(`¿Es igual 5 y Symbol(5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1: ${typeof(numero1)} y numero5: ${typeof(numero5)}`);
+if(numero1===numero6){
+    console.log(`Se comparó numero1 con numero5, determinando que tienen el mismo tipo de DATO.`);
+}else{
+    console.log(`Se comparó numero1 con numero5, detrerminando que NO tienen el mismo tipo de DATO.`);
+}
+
+// 7. NULL
+console.warn("--- Tipo de dato - NULL (Nulo o vacío)");
+//El tipo de adato se asigna cuando el sistema o el usuario saben de la variable pero prefieren dejarlo vacío, bajo su consentimiento, a diferencia de UNDEFINED que es un valor desconocido por DEFAULT por JS.
+
+let nombreUsuario=null;
+let passUsuario=null;
+let generoUsuario=null;
+let estatusRelacionSentimental=null;
+let fecha_ultimoPost;
+
+
+//Supongamos que estamos programando una Red Social, tipo facebook, en la que parte la información se publicará en el perfil del usuario.
+
+//Si el usuario no ha iniciado sesión em el dispositivo móvil o en la aplicación web, puede explorar contenido de acceso ppúblico, y no existirá información para mostrar.
+
+//en la HU (Historia de Usuario), que el usuario desea logearse deberá ingresar su número telefónico o correo electrónico y una contraseña que deberemos guardar en las variables previamente declaradas.
+
+//Supongamos que el usuario Amaury con correo electronico amaury210@gmail.com desea ingresar su contraseña pas: pass1234
+
+nombreUsuario="amaury21@gmail.com";
+passUsuario="pass1234"
+console.log(``);
