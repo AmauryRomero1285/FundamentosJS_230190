@@ -11,8 +11,9 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
 |--|--|--|--|
 |1.|Metodología de Evaluación|1| ✅Finalizado|
 |2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
-|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
-|4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
+|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|✅Finalizada|
+|4.|Ejercicio 02: Tipos de datos en JavaScript| ✅Finalizada|
+|5.|Ejercicio 03: |En progreso|
 
 ### Autor
 Yáred Amaury Romero Martínez
