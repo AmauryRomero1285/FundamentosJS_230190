@@ -111,3 +111,39 @@ case(anioNacimiento<1968):
 }
 }
 console.log(`Dado que nació en el año 1997 soy de la generación ${asignaGeneracion(1982)}`);
+
+console.log("%c4.- Manejo de Excepciones (TRY/ACTION)", style_console);
+
+//En algunas ocasiones existieran errore que no son culpa del programa, sino del usuario, la red, el<so e incluso de un middleware, pero que sin duda debemos controlar para evitar fallas en la ejecución.
+
+try{//intenta
+let result = 0/10;
+console.log(`Intentamos dividir 0/10, el resultado es: ${result}`);
+}catch(error){
+    console.log("Ocurrió un error: "+error.message);
+}
+try{//intenta
+    let result = 10/0;
+    console.log(`Intentamos dividir 10/0, el resultado es: ${result}`);
+    }catch(error){
+        console.log("Ocurrió un error: "+error.message);
+    }
+    try{//intenta
+        let a="hola";
+        let result = a/10;
+        console.log(`Intentamos dividir a/10, el resultado es: ${result}`);
+        }catch(error){
+            console.log("Ocurrió un error: "+error.message);
+        }
+        try{//intenta
+            let result = a/10;
+            console.log(result);
+            }catch(error){
+                console.log("Ocurrió un error: "+error.message);
+            }
+            try{//intenta
+                let x=8, y=2, result=x/y; //Dividir una variable no definoda entre 0
+                console.log(result);
+                }catch(error){
+                    console.log("Ocurrió un error: "+error.message);
+                }
