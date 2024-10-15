@@ -1,5 +1,5 @@
 //Estilización de los mensajes de salida
-const bg = "linear-gradient(11deg, rgba(129,50,36,1) 0%, rgba(155,129,26,1) 23%, rgba(255,191,26,1) 86%)";
+const bg = "linear-gradient(11deg, rgba(125,50,36,1) 12%, rgba(125,129,26,1) 43%, rgba(105,191,26,1) 56%)";
 const style_console = `background: ${bg}; color: white; border-radius: 6px; padding: 4px; font-size: 1.0rem; font-weight: bold`
 
 //Personalización de las Salidas a Consola
@@ -72,7 +72,7 @@ else if (fechaActual >= inicioVerano && fechaActual < inicioOtonio) {
     horarioVerano = true;
 }
 
-console.log("%c2.- Operdaor Ternario (validación?cumple.no_cumple)", style_console);
+console.log("%c2.- Operdor Ternario (validación?cumple.no_cumple)", style_console);
 //En javaScript existia una operación simplificada que valida si una condición se cumple o no, y que hacer en cada caso
 
 const edadPersona = 18;
@@ -145,7 +145,7 @@ try {//intenta
 } catch (error) {
     console.log("Ocurrió un error: " + error.message);
 }
-console.log("%c5.- Control de Ciclos (BREAK/CONTINUA)", style_console);
+console.log("%c5.- Control de Ciclos (BREAK/CONTINUE)", style_console);
 
 //En algunas ocasiones será importanate detener un ciclo de manera abrupta para controlar casos especiales en un ciclo...
 
@@ -189,15 +189,15 @@ for (let i = 11; i >= 0; i--) {
     console.log(`El ${i + 1} mes es: ${meses[i]}`);
 }
 
-console.log("%c6.- Ciclo Condicional (WHILE)", style_console);
+console.log("%c7.- Ciclo Condicional (WHILE)", style_console);
 
-//Estos ciclos (BUCLE) dependen de una condiciójn para continuar ejecutandose
+//Estos ciclos (BUCLE) dependen de una condición para continuar ejecutandose
 
 let finDeSemana = false;
 let mess = "";
 let j = 0;
-while (j<dias.length) {
-    switch ( j ) {
+while (j < dias.length) {
+    switch (j) {
         case 0:
             finDeSemana = true;
             mess = "Domingo de feminismo"
@@ -227,10 +227,113 @@ while (j<dias.length) {
             mess = "Sábado de clasismo"
             break;
     }
-if(!finDeSemana){
-    console.log(`Día ${j+1}`);
-    console.log(`Mensaje del día:  ${mess}`);
-}
-  
+    if (!finDeSemana) {
+        console.log(`Día ${j + 1}`);
+        console.log(`Mensaje del día:  ${mess}`);
+    }
+
     j++;
 }
+console.log("%c8.- Ciclos Condicionales, que se ejecutan al menos unaa vez - (DO WHILE)", style_console);  
+            
+//Simulamos una lista de episodios de una temporada
+let episodios=[
+   "Episodio 1: El comienzo",
+   "Episodio 2: La revelación",
+   "Episodio 3: La confrontación",
+   "Episodio 4: El desenlace",
+   "Episodio 5: El final inesperado"
+];
+
+let indice= 0;
+let continuarViendo = true; // Esta variable simula la decisión del usuario de continuar viendo
+
+do {
+    console.log(`Reproduciendo ${episodios[indice]}`);
+
+    //Simulamos la reproducción del episodio
+    indice++;
+
+    //Simulamos una pregunta al usuario si desea seguir viendo
+    if(indice < episodios.length){
+        continuarViendo = confirm("¿Deseas continuar con el siguiente episodio?");
+    }else{
+        continuarViendo = false; // Cuando se acaba la lista de episodios
+    }
+} while (continuarViendo && indice < episodios.length);
+
+console.log("Fin de la reproducción.");
+
+//Ciclo para recorrer objetos iterables cómo mapas, arreglos, cadenas y conjuntos de datos.
+console.log("%c9.- Ciclos para recorrer elementos finitos - (FOR ... OF)", style_console);
+
+let seriesTrending = [
+{ nombre: "The Witcher", temporadas: 3, totalViewers: "1.5M", totalReprods: "3.0M" },
+{ nombre: "Stranger Things", temporadas: 4, totalViewers: "6.5M", totalReprods:"10M" },
+{ nombre: "The Boys", temporadas: 3 , totalViewers: "3.2M"},
+{ nombre: "Loki", temporadas: 2, totalReprods:"250K" },
+{ nombre: "Succession", temporadas: 4 }
+];
+
+// Usando for...of para recorrer la lista
+for (let serie of seriesTrending) {
+console.log(`Serie: ${serie.nombre}, Temporadas: ${serie.temporadas}`);
+}
+
+try{
+console.log(`La ultima serie leida fué: ${serie.nombre}`); // No va a funcionar por la varie serie ya no existe ya que su alcance solo estuvo durante el ciclo
+}
+catch(error)
+{
+console.log("Mensaje de error: "+error.message)
+}
+
+console.log("%c10.- Ciclos para recorrer las propiedades de elementos finitos - (FOR ... IN)", style_console);
+
+// Usando for...in para recorrer cada serie
+for (let i in seriesTrending){
+console.log(`Serie ${parseInt(i) + 1}:`);
+for (let propiedad in seriesTrending[i]) {
+    console.log(`${propiedad}: ${seriesTrending[i][propiedad]}`);
+}
+console.log('---------------------');
+}
+
+console.log("%c11.- Ciclos ininterrumpidos para cada uno de los elementos del arreglo (FOR EACH) ", style_console);
+
+// Lista de series de TV trending con temporadas, viewers y reproducciones
+let seriesTrending2 = [
+{ nombre: "The Witcher", temporadas: 3, viewers: 8000000, reproducciones: 25000000 },
+{ nombre: "Stranger Things", temporadas: 4, viewers: 12000000, reproducciones: 40000000 },
+{ nombre: "The Boys", temporadas: 3, viewers: 7000000, reproducciones: 22000000 },
+{ nombre: "Loki", temporadas: 2, viewers: 9000000, reproducciones: 30000000 },
+{ nombre: "Succession", temporadas: 4, viewers: 6000000, reproducciones: 18000000 },
+{ nombre: "The Walking Dead", temporadas: 16, viewers: 16000000, reproducciones: 36000000 }
+];
+
+// Usando forEach para recorrer cada serie y calcular la calificación
+seriesTrending2.forEach((serie, index) => {
+let calificacion = (serie.reproducciones / serie.viewers).toFixed(2); // Calcula la calificación y la redondea a 2 decimales
+console.log(`Serie ${index + 1}:`);
+console.log(`Nombre: ${serie.nombre}`);
+console.log(`Temporadas: ${serie.temporadas}`);
+console.log(`Viewers: ${serie.viewers}`);
+console.log(`Reproducciones: ${serie.reproducciones}`);
+console.log(`Calificación: ${calificacion}`); // Muestra la calificación
+console.log('---------------------');
+});
+
+
+// Usando Filter para filtrar , y map para transformar la información.
+// Lista de series que queremos verificar
+let seriesDeseadas = ["The Walking Dead", "The Boys", "Loki"];
+
+// Usando map e includes para filtrar y obtener los nombres de series con 3 temporadas
+let seriesConTresTemporadas = seriesTrending2
+.filter(serie => serie.temporadas <= 3) // Filtramos las series que tienen 3 temporadas
+.map(serie => serie.nombre) // Obtenemos solo los nombres de esas series
+.filter(nombre => seriesDeseadas.includes(nombre)); // Filtramos las que están en la lista de series deseadas
+
+// Mostrar los resultados
+console.log("Series con 3 temporadas que están en la lista deseada:");
+console.log(seriesConTresTemporadas);    
